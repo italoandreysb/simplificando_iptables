@@ -11,9 +11,10 @@ iptables -t mangle -X
 ```
 
 ## 2. Permitir tráfego de entrada e saída para a rede 192.168.0.0/24
+```
 sudo iptables -A INPUT -s 192.168.0.0/24 -j ACCEPT
 sudo iptables -A OUTPUT -d 192.168.0.0/24 -j ACCEPT
-
+```
 
 ## 3. Definindo bloqueio como política padrão
 ```
