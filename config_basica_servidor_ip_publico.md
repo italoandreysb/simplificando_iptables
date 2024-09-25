@@ -37,8 +37,8 @@ iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 ```
 iptables -A INPUT -p icmp -j ACCEPT
 ```
-# Salvar regras
+# Salvar regras de forma persistente
 ```
-netfilter-persistent save
-netfilter-persistent reload
+apt install iptables-persistent
+iptables-save > /etc/iptables/rules.v4
 ```
